@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .login-panel {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .login-panel h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-panel">
+        <h2>数据分析系统</h2>
+        <form id="loginForm">
+            <input type="text" class="login-input" placeholder="用户名" id="usernameInput" required>
+            <input type="password" class="login-input" placeholder="密码" id="passwordInput" required>
+            <button type="button" class="login-button" onclick="login()">登录</button>
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('usernameInput').value;
+            var password = document.getElementById('passwordInput').value;
+            // 在这里可以添加处理登录的逻辑
+            console.log('Username: ' + username + ', Password: ' + password);
+        }
+    </script>
+
+</body>
+</html>
